@@ -9,12 +9,14 @@ public class Droid
 	
 	public Droid()
 	{
-		
+		this.numberOfAccessories = 4;
+		this.droidColor = Color.BLUE;
 	}
 	
 	public Droid(int numberOfAccessories, Color droidColor)
 	{
-		
+		this.numberOfAccessories = numberOfAccessories;
+		this.droidColor = droidColor;
 	}
 
 	public int getNumberOfAccessories()

@@ -72,6 +72,10 @@ public class TooDeePanel extends JPanel
 		baseLayout.putConstraint(SpringLayout.WEST, changeButton, 0, SpringLayout.WEST, displayButton);
 		baseLayout.putConstraint(SpringLayout.SOUTH, changeButton, -6, SpringLayout.NORTH, displayButton);
 		baseLayout.putConstraint(SpringLayout.EAST, displayButton, -10, SpringLayout.EAST, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, droidTable, 135, SpringLayout.SOUTH, editField);
+		baseLayout.putConstraint(SpringLayout.WEST, droidTable, 0, SpringLayout.WEST, editField);
+		baseLayout.putConstraint(SpringLayout.SOUTH, droidTable, 24, SpringLayout.SOUTH, editField);
+		baseLayout.putConstraint(SpringLayout.EAST, droidTable, 430, SpringLayout.WEST, editField);
 	}
 	
 	private void setupListeners()

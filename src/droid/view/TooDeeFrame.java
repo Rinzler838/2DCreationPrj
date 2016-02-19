@@ -2,10 +2,10 @@ package droid.view;
 
 import droid.controller.TooDeeController;
 import droid.view.TooDeePanel;
-
+import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
-public class TooDeeFrame
+public class TooDeeFrame extends JFrame
 {
 	private TooDeeController baseController;
 	private TooDeePanel basePanel;
@@ -25,10 +25,11 @@ public class TooDeeFrame
 	
 	private void setupFrame()
 	{
-		//this.setContentPane(basePanel);
-		//this.setSize(450,300);
-		//this.setResizable(false);
-		//this.setVisible(true);
+		this.setSize(450,300);
+		this.setContentPane(basePanel);
+		this.setTitle("| DROID |");
+		this.setResizable(false);
+		this.setVisible(true);
 	}
 	
 	public TooDeeController getBaseController()
