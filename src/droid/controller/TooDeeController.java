@@ -1,7 +1,6 @@
 package droid.controller;
 
 import java.awt.Color;
-
 import droid.model.Droid;
 import droid.view.TooDeeFrame;
 
@@ -13,12 +12,13 @@ public class TooDeeController
 	public TooDeeController()
 	{
 		myDroid = new Droid[3][3];
-		baseFrame = new TooDeeFrame();
+		setupArray();
+		baseFrame = new TooDeeFrame(this);
 	}
 	
 	public void start()
 	{
-		setupArray();
+		
 	}
 	
 	private void setupArray()
