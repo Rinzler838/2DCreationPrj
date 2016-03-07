@@ -43,6 +43,8 @@ public class TooDeePanel extends JPanel
 		String [] columnHeaders = {"Column 0", "Column 1", "Column 2"};
 		DefaultTableModel tableModel = new DefaultTableModel(baseController.getMyDroid(), columnHeaders);
 		droidTable = new JTable(tableModel);
+		droidPane = new JScrollPane(droidTable);
+		DefaultTableModel droidTableModel = new DefaultTableModel(baseController);
 	}
 	
 	private void setupPanel()
@@ -62,7 +64,8 @@ public class TooDeePanel extends JPanel
 	{
 		//Garbage here
 		baseLayout.putConstraint(SpringLayout.NORTH, rowField, 81, SpringLayout.NORTH, this);
-		baseLayout.putConstraint(SpringLayout.NORTH, columnField, 81, SpringLayout.NORTH, this);baseLayout.putConstraint(SpringLayout.NORTH, editField, 6, SpringLayout.SOUTH, rowField);
+		baseLayout.putConstraint(SpringLayout.NORTH, columnField, 81, SpringLayout.NORTH, this);
+		baseLayout.putConstraint(SpringLayout.NORTH, editField, 6, SpringLayout.SOUTH, rowField);
 		baseLayout.putConstraint(SpringLayout.WEST, editField, 10, SpringLayout.WEST, this);
 		baseLayout.putConstraint(SpringLayout.NORTH, currentDroidLabel, 6, SpringLayout.NORTH, rowField);
 		baseLayout.putConstraint(SpringLayout.EAST, currentDroidLabel, -55, SpringLayout.WEST, rowField);
